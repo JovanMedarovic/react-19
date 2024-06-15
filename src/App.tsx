@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import endavaLogo from "../resources/endava.svg";
+import { Compiler } from "./ReactCompiler";
 import { AsyncTransition } from "./ClientAPI/AsyncTransition";
-import { Rerendering } from "./ReactCompiler/Rendering";
 import { Action } from "./ClientAPI/Action";
 import { UseActionState } from "./ClientAPI/UseActionState";
 import { UseFormStatus } from "./ClientAPI/UseFormStatus";
@@ -23,8 +23,8 @@ function App() {
         <h1>REACT 19</h1>
         <div>
           {/*//!  REACT COMPILER !//*/}
-          <Rerendering />
-
+          <Compiler />
+          
           {/*//!  ClientAPI !//*/}
           {/* <AsyncTransition /> */}
           {/* <Action /> */}
@@ -38,10 +38,6 @@ function App() {
           {/* <Ref /> */}
           {/* <DocumentMetadata /> */}
           {/* <StylesheetSupport /> */}
-
-          {/*//!  ServerAPI !//*/}
-          {/* <ServerComponent /> */}
-          {/* <ServerAction /> */}
         </div>
       </div>
     </main>
