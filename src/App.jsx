@@ -2,17 +2,13 @@
 import endavaLogo from "../resources/endava.svg";
 import { Compiler } from "./ReactCompiler";
 import { AsyncTransition } from "./ClientAPI/AsyncTransition";
-import { Action } from "./ClientAPI/Action";
 import { UseActionState } from "./ClientAPI/UseActionState";
 import { UseFormStatus } from "./ClientAPI/UseFormStatus";
 import { UseOptimistic } from "./ClientAPI/UseOptimistic";
 import { Use } from "./ClientAPI/Use";
-import { PreloadingAPIs } from "./ClientAPI/PreloadingAPIs";
 import { DocumentMetadata } from "./Improvements/DocumentMetadata";
 import { Ref } from "./Improvements/Ref";
 import { StylesheetSupport } from "./Improvements/StylesheetSupport";
-import { ServerComponent } from "./ServerAPI/ServerComponent";
-import { ServerAction } from "./ServerAPI/ServerAction";
 import "./App.css";
 
 function App() {
@@ -22,22 +18,22 @@ function App() {
       <div className="container">
         <h1>REACT 19</h1>
         <div>
-          {/*//!  REACT COMPILER !//*/}
-          <Compiler />
-          
-          {/*//!  ClientAPI !//*/}
-          {/* <AsyncTransition /> */}
-          {/* <Action /> */}
-          {/* <UseActionState /> */}
-          {/* <UseFormStatus /> */}
-          {/* <UseOptimistic /> */}
-          {/* <Use /> */}
-          {/* <PreloadingAPIs /> */}
-
-          {/*//!  Improvments !//*/}
+          {/*//!  Improvements !//*/}
           {/* <Ref /> */}
           {/* <DocumentMetadata /> */}
           {/* <StylesheetSupport /> */}
+
+          {/*//!  ClientAPI !//*/}
+          {/*//!  ACTIONS !//*/}
+          {/* <AsyncTransition /> */}
+          {/* <UseActionState /> */}
+          <UseFormStatus />
+          {/* <UseOptimistic /> */}
+          {/*//!  The rest of ClientAPI features !//*/}
+          {/* <Use /> */}
+
+          {/*//!  REACT COMPILER !//*/}
+          {/* <Compiler /> */}
         </div>
       </div>
     </main>
