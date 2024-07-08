@@ -8,7 +8,7 @@ import { UseOptimistic } from "./ClientAPI/UseOptimistic";
 import { Use } from "./ClientAPI/Use";
 import { DocumentMetadata } from "./Improvements/DocumentMetadata";
 import { Ref } from "./Improvements/Ref";
-import { StylesheetSupport } from "./Improvements/StylesheetSupport";
+import { ThemeProvider } from "./ThemeContext";
 import "./App.css";
 
 function App() {
@@ -21,16 +21,17 @@ function App() {
           {/*//!  Improvements !//*/}
           {/* <Ref /> */}
           {/* <DocumentMetadata /> */}
-          {/* <StylesheetSupport /> */}
 
           {/*//!  ClientAPI !//*/}
           {/*//!  ACTIONS !//*/}
           {/* <AsyncTransition /> */}
           {/* <UseActionState /> */}
-          <UseFormStatus />
+          {/* <UseFormStatus /> */}
           {/* <UseOptimistic /> */}
-          {/*//!  The rest of ClientAPI features !//*/}
-          {/* <Use /> */}
+          {/*//!  The non-action ClientAPI features !//*/}
+          {/* <ThemeProvider>
+            <Use />
+          </ThemeProvider> */}
 
           {/*//!  REACT COMPILER !//*/}
           {/* <Compiler /> */}
