@@ -4,17 +4,6 @@ import { Header } from "./components/Header";
 import { Counter } from "./components/Counter";
 import { superSlowMethod } from "./utils";
 
-/**
- * @PresentationNotes
- * Da bi smo koristili react kompajler trebamo ispuniti preduslove:
- *  Is valid, semantic JavaScript
- *  Tests that nullable/optional values and properties are defined before accessing them (for example, by enabling strictNullChecks if using TypeScript), i.e., if (object.nullableProperty) { object.nullableProperty.foo } or with optional-chaining object.nullableProperty?.foo
- *  Follows the Rules of React:
- *   - Components and Hooks must be pure
- *   - React calls Components and Hooks
- *   - Rules of Hooks
- */
-
 export const Compiler = () => {
   const [counter1, setCounter1] = useState(0);
   const [counter2, setCounter2] = useState(0);
@@ -25,8 +14,8 @@ export const Compiler = () => {
   const a = 10000;
   const b = 100000;
 
-  const superSlowResult = superSlowMethod(a, b);
-  // const superSlowResult = useMemo(() => superSlowMethod(a, b), [a,b]);
+  // const superSlowResult = superSlowMethod(a, b);
+  const superSlowResult = useMemo(() => superSlowMethod(a, b), [a,b]);
 
   return (
     <main>

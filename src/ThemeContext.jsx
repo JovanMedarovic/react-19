@@ -17,7 +17,6 @@ export const ThemeProvider = ({ children }) => {
     toggle: toggleTheme,
   };
 
-  /* //! The ThemeContext.Provider => .Provider is removed */
   return (
     <ThemeContext value={contextValue}>
       {children}
