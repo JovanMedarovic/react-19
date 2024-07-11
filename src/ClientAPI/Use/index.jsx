@@ -29,14 +29,14 @@ export const Use = () => {
   return (
     <>
       {/*//! UseContext => use !*/}
-      {getThemeBtn()}
+      {/* {getThemeBtn()} */}
 
       {/*//! Trigger suspense in promise => use !*/}
-      {/* <Suspense
+      <Suspense
         fallback={<div>Fetching data...</div>}
       >
         <DataList commentsPromise={getData()} />
-      </Suspense> */}
+      </Suspense>
     </>
   );
 };

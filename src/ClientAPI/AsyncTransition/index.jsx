@@ -4,14 +4,14 @@ import { updateName } from "../../promises";
 
 export const AsyncTransition = () => {
   const [name, setName] = useState("");
-  const [isPending, setIsPending] = useState(false);
   const [data, setData] = useState("");
+  const [isPending, startTransition] = useTransition();
 
   const handleSubmit = async () => {
-    setIsPending(true);
-    const data = await updateName(4000, name);
-    setIsPending(false);
-    setData(data);
+    startTransition(async () => {
+      const data = await updateName(4000, name);
+      setData(data);
+    });
   };
 
   return (

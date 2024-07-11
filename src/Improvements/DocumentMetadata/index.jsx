@@ -1,4 +1,4 @@
-// import { Suspense } from "react";
+import { Suspense } from "react";
 
 export const DocumentMetadata = () => {
   const post = {
@@ -22,7 +22,7 @@ export const DocumentMetadata = () => {
       /> */}
 
       {/*//! Suspense block supported !//*/}
-      {/* <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <link rel="stylesheet" href="styles.css" precedence="default" />
         <link rel="stylesheet" href="styles2.css" precedence="default" />
         <link
@@ -30,7 +30,7 @@ export const DocumentMetadata = () => {
           href="importantStyleGoFirst.css"
           precedence="high"
         />
-      </Suspense> */}
+      </Suspense>
       <div>
         <h2>Document Metadata</h2>
       </div>

@@ -2,7 +2,7 @@ import { useActionState } from "react";
 import { updateName } from "../../promises";
 
 export const UseActionState = () => {
-  const [data, submitAction, isPending] = useActionState(
+  const [state, submitAction, isPending] = useActionState(
     async (previousState, formData) => {
       const name = await formData.get("userName");
       const data = await updateName(4000, name);
@@ -28,7 +28,7 @@ export const UseActionState = () => {
     <form action={submitAction}>
       <input type="text" name="userName" style={{ marginRight: "10px" }} />
       <button type="submit">Submit</button>
-      {isPending ? <div>Loading...</div> : <div>{data}</div>}
+      {isPending ? <div>Loading...</div> : <div>{state}</div>}
     </form>
   );
 };

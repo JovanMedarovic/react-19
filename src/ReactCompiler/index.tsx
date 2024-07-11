@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Header } from "./components/Header";
 import { Counter } from "./components/Counter";
 import { superSlowMethod } from "./utils";
@@ -14,8 +13,8 @@ export const Compiler = () => {
   const a = 10000;
   const b = 100000;
 
-  // const superSlowResult = superSlowMethod(a, b);
-  const superSlowResult = useMemo(() => superSlowMethod(a, b), [a,b]);
+  const superSlowResult = superSlowMethod(a, b);
+  // const superSlowResult = useMemo(() => superSlowMethod(a, b), [a,b]);
 
   return (
     <main>
